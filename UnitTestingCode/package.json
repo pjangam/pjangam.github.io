@@ -1,0 +1,11 @@
+{
+  "name": "unitTesting",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "proxyquire": "1.7.10",
+    "sinon": "^1.17.6"
+  }
+}
