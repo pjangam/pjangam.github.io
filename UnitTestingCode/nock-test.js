@@ -1,14 +1,23 @@
+var nock = require('nock');
+var assert = require('assert');
+
 describe('nock test', function () {
 
     it('should return mock data on http call', function (done) {
+          this.timeout(60000);
+
         var api = nock("https://www.google.com")
             .get('/doodles')
             .reply(200, 'mockResponse');
 
-        var http = require('http');
+        var https = require('https');
         var responseMessage = '';
-        var options={};
-        http.request(options, (res) => {
+        var options = {
+            "host": "www.google.com",
+            //"protocol": "https",
+            "path":"/doodles"
+        };
+        var req = https.request(options, (res) => {
             res.setEncoding('utf8');
             var statusCode = res.statusCode;
 
@@ -23,6 +32,7 @@ describe('nock test', function () {
                 done();
             };
         });
+        req.end();
 
     });
 

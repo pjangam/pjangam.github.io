@@ -2,7 +2,10 @@
   "name": "unitTesting",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "assert": "^1.4.1",
+    "nock": "^8.0.0"
+  },
   "devDependencies": {
     "assert": "^1.4.1",
     "proxyquire": "1.7.10",
