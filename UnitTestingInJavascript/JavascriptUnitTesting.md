@@ -270,3 +270,5 @@ nyc supports many switches (use `nyc --help` to see them all) Let's discuss esse
 
 Note 1. Each framework given above have rich functionality than demonstrated e.g. mocha along with BDD style syntax used above supports [TDD](https://mochajs.org/#interfaces) style syntax, it also supports test case/suite level initializer and cleanups, custom timeouts, test retries, multiple reporters etc. Snippets above are just to get started you up with unit testing. You can explore each of them in detail when you actually start using them.
 Note 2. Most of the frameworks above are not restricted to NodeJS and can be used for browser side javascript testing as well. e.g. [mocha](https://mochajs.org/#running-mocha-in-the-browser) and [sinon](http://sinonjs.org/docs/)
+
+test commit
