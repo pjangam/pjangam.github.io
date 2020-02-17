@@ -1,0 +1,54 @@
+FORMAT: 1A
+HOST: https://bcg.org/
+
+# TestGraphQL
+
+Lorem Ipsum.
+
+## employees [/employees]
+ 
+
+
+This is how you can search for employees.
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+### Search all people [POST]
+
++ Request (application/qraphql)
+
+        {
+            "query":"{
+            
+            employees(ids: [\"hrid1\",\"hrid2\"]) { id name slackId}}"
+            
+        
+        }
++ Response 200 (application/json)
+    + Attributes
+        - employees (Employee)
+    
+    
+    
+# Data Structures
+
+# Person
+
++ name
+
+
+# Company
+
++ name: `Apiary`
++ founder (Person)
++ founded: 2011 (number) - The year in which the company was founded
++ address
+    + street: 235 Ninth Street
+    + city: San Francisco
+    + state: California
+
+
+# Employee
+
++ name: Kyle (string) - The Person's name
++ title
++ company: EE (Company)
