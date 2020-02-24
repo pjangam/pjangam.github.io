@@ -1,4 +1,6 @@
 theme: jekyll-theme-architect
+title: Pramod Jangam
+description: Personal website
 plugins:
   - jekyll-relative-links
 relative_links:
