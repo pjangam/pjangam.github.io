@@ -1,4 +1,4 @@
-*** copy below content to file: ~/.bashrc
+*** copy below content to file: ~/.bashrc ***
 
 ```
 alias gs="git status"
