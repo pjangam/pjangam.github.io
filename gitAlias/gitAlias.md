@@ -1,9 +1,6 @@
-### copy below content to file: ~/.bashrc
+*** copy below content to file: ~/.bashrc
 
-
-
-
-
+```
 alias gs="git status"
 alias gph="git push origin HEAD"
 alias gpl="git pull"
@@ -18,3 +15,4 @@ alias stash="git stash save -u"
 alias sln="start *.sln"
 alias clean="git clean -df"
 alias rc="git rebase --continue"
+```
