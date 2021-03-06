@@ -1,13 +1,9 @@
 import React from 'react';
+import Landing from './Pages/Landing';
+import 'font-awesome/css/font-awesome.min.css';
 
 function App() {
-  return (
-    <div className="App">
-      {/*<header className="App-header">*/}
-      Pramod Jangam
-      {/*</header>*/}
-    </div>
-  );
+  return <Landing></Landing>;
 }
 
 export default App;
