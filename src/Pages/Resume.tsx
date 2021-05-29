@@ -5,7 +5,7 @@ const Resume = () => {
   const style = {
     width: '95%',
     height: '80vh',
-    margin: '20 0 0 0',
+    margin: '0 0 0 20px',
   };
   return (
     <div>
