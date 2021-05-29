@@ -2,9 +2,9 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { Jumbotron, Button, Container, Col, Row } from 'reactstrap';
 import Flag from 'react-world-flags';
-import { Timeline, Follow } from 'react-twitter-widgets';
+import { Follow } from 'react-twitter-widgets';
 
-const Landing = ({}) => {
+const Landing = () => {
   const history = useHistory();
 
   function handleResume() {
