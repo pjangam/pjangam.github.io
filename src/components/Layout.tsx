@@ -7,9 +7,7 @@ const Layout = (props: any) => {
   return (
     <div className={className}>
       <Container className="text-center">
-        <p>
           <h2>Pramod Jangam</h2>
-        </p>
         <Link to="/" color="primary">
           Home
         </Link>

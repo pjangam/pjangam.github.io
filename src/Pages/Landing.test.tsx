@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { render, screen, cleanup } from '@testing-library/react';
-import Landing from './Landing';
+import { Landing } from './Landing';
 import '@testing-library/jest-dom/extend-expect';
 
 afterEach(() => {
@@ -22,5 +22,5 @@ xit('renders Pramod Jangam', () => {
 
 it('contains jumbotron', () => {
   const { getByTestId } = render(<Landing></Landing>);
-  expect(getByTestId('jumbotron')).toBeDefined()
+  expect(getByTestId('jumbotron')).toBeDefined();
 });
