@@ -55,8 +55,7 @@ const Landing = ({}) => {
         </Row>
       </Container>
 
-      <hr></hr>
-      <span>© 2020 Pramod Jangam</span>
+     
     </div>
   );
 };

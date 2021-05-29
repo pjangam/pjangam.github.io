@@ -7,10 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { MyRouter } from './Router';
 function App() {
   return (
-    <Router>
-      <Route path="/" exact={true} component={Landing}></Route>
-      <Route path="/resume" exact={true} component={Resume}></Route>{' '}
-    </Router>
+    <MyRouter />
   );
 }
 
