@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { Jumbotron, Button, Container, Col, Row } from 'reactstrap';
 import Flag from 'react-world-flags';
 import { Timeline, Follow } from 'react-twitter-widgets';
@@ -8,8 +8,19 @@ const Landing = ({}) => {
   const history = useHistory();
 
   function handleResume() {
-    history.push("/resume");
+    history.push('/resume');
   }
+  // eslint-disable-next-line no-lone-blocks
+  {
+    /*TODO: Get listing from file instead of hardcoding */
+  }
+  const blogPosts = [
+    {
+      title: 'Unit testing in Javascript (NodeJS)',
+      path: 'JavascriptUnitTesting',
+    },
+    { title: 'gitAlias', path: 'gitAlias' },
+  ];
   return (
     <div data-testid="root">
       <Jumbotron data-testid="jumbotron">
@@ -30,20 +41,18 @@ const Landing = ({}) => {
             </Row>
             <Row>My job history, mostly tech, mostly computers.</Row>
             <Row>
-              <Button
-                onClick={handleResume}
-              >
-                Resume
-              </Button>
+              <Button onClick={handleResume}>Resume</Button>
             </Row>
           </Col>
           <Col md="4">
             <Row>
               <h2>Blogs</h2>
             </Row>
-            {/*TODO: get for different component*/}
-            <Row>Unit testing in Javascript (NodeJS)</Row>
-            <Row>Git Alias</Row>
+            {blogPosts.map((b) => (
+              <Row>
+                <Link to={`blogs/${b.path}`}>{b.title}</Link>
+              </Row>
+            ))}
           </Col>
         </Row>
         <br />
@@ -54,10 +63,8 @@ const Landing = ({}) => {
           <Follow username="pjangam"></Follow>
         </Row>
       </Container>
-
-     
     </div>
   );
 };
 
-export  {Landing};
+export { Landing };

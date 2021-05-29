@@ -1,5 +1,4 @@
 import React from 'react';
-const GoogleDocsViewer = require('react-google-docs-viewer');
 
 const Resume = () => {
   const style = {
