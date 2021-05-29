@@ -1,9 +1,15 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Jumbotron, Button, Container, Col, Row } from 'reactstrap';
 import Flag from 'react-world-flags';
 import { Timeline, Follow } from 'react-twitter-widgets';
 
 const Landing = ({}) => {
+  const history = useHistory();
+
+  function handleResume() {
+    history.push("/resume");
+  }
   return (
     <div data-testid="root">
       <Jumbotron data-testid="jumbotron">
@@ -24,7 +30,11 @@ const Landing = ({}) => {
             </Row>
             <Row>My job history, mostly tech, mostly computers.</Row>
             <Row>
-              <Button>Resume</Button>
+              <Button
+                onClick={handleResume}
+              >
+                Resume
+              </Button>
             </Row>
           </Col>
           <Col md="4">
@@ -51,4 +61,4 @@ const Landing = ({}) => {
   );
 };
 
-export default Landing;
+export  {Landing};
