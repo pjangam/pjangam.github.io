@@ -39,7 +39,7 @@ const Blogs = () => {
         <h2>Blogs</h2>
       </Row>
       {blogPosts.map((b) => (
-        <Row>
+        <Row key={b.path}>
           <Link to={`blogs/${b.path}`}>{b.title}</Link>
         </Row>
       ))}
