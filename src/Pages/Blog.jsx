@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import marked from 'marked';
-import { Container } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 
 const BlogPost = () => {
   const [data, setData] = useState('');
   const { blogName } = useParams();
-  const blogModule = require(`./Blogs/${blogName}.md`);
+  const blogModule = require(`./BlogPosts/${blogName}.md`);
 
   fetch(blogModule.default)
     .then((response) => {
@@ -25,4 +25,26 @@ const BlogPost = () => {
   );
 };
 
-export { BlogPost };
+const Blogs = () => {
+  const blogPosts = [
+    {
+      title: 'Unit testing in Javascript (NodeJS)',
+      path: 'JavascriptUnitTesting',
+    },
+    { title: 'gitAlias', path: 'gitAlias' },
+  ];
+  return (
+    <Container>
+      <Row>
+        <h2>Blogs</h2>
+      </Row>
+      {blogPosts.map((b) => (
+        <Row>
+          <Link to={`blogs/${b.path}`}>{b.title}</Link>
+        </Row>
+      ))}
+    </Container>
+  );
+};
+
+export { BlogPost, Blogs };
