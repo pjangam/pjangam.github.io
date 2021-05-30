@@ -29,6 +29,10 @@ clean: ## clean dependencies and build
 build: ## install dependencies
 	npm i
 
+.PHONY: publish
+publish: ## generate production build
+	npm run build
+
 .PHONY: deploy
 deploy: ## deploy to github page
 	echo 'TODO: copy build somewhere github page is hosted'
