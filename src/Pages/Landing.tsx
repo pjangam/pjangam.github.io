@@ -28,8 +28,9 @@ const Landing = () => {
           <h1>Pramod Jangam</h1>
           <span>
             Software developer <i className="fa fa-laptop"></i>, Music lover 🎼
-            🎶, Amateur guitarist 🎸, Atheist ☮️, Explorer , Student 📚 of life. <i className="fa fa-map-marker"></i> Pune, India
-            {' '}<Flag code="IND" height="16" fallback="India" />
+            🎶, Amateur guitarist 🎸, Atheist ☮️, Explorer , Student 📚 of life.{' '}
+            <i className="fa fa-map-marker"></i> Pune, India{' '}
+            <Flag code="IND" height="16" fallback="India" />
           </span>
         </Container>
       </Jumbotron>
@@ -67,4 +68,4 @@ const Landing = () => {
   );
 };
 
-export { Landing };
+export default Landing;
