@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { render, screen, cleanup } from '@testing-library/react';
-import { Landing } from './Landing';
+import Landing from './Landing';
 import '@testing-library/jest-dom/extend-expect';
 import { BrowserRouter as Router } from 'react-router-dom';
-
 
 afterEach(() => {
   cleanup();
@@ -23,6 +22,10 @@ xit('renders Pramod Jangam', () => {
 });
 
 it('contains jumbotron', () => {
-  const { getByTestId } = render(<Router><Landing /></Router>);
+  const { getByTestId } = render(
+    <Router>
+      <Landing />
+    </Router>,
+  );
   expect(getByTestId('jumbotron')).toBeDefined();
 });
