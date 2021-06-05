@@ -19,22 +19,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           ref: "react"
-
       - name: Run Coverage
         run: |
           make build cover
-      - name: Generate Production build
-        run: |
-          make publish
-      - name: Coveralls Parallel
+      - name: Publish Code Coverage
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.github_token }}
-          flag-name: run
-          parallel: true
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Production build
+        run: |
+          make publish
       - name: Publish to GitHub Pages
         # You may pin to the exact commit or the version.
         # uses: crazy-max/ghaction-github-pages@db4476a01402e1a7ce05f41832040eef16d14925
@@ -69,12 +71,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
-  finish:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Coveralls Finished
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.github_token }}
-        parallel-finished: true      
