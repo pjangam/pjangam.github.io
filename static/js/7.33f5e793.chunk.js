@@ -1,0 +1,2 @@
+(this["webpackJsonppjangam.github.io"]=this["webpackJsonppjangam.github.io"]||[]).push([[7],{49:function(t,e,i){"use strict";i.r(e);i(0);var o=i(2);e.default=function(){return Object(o.jsx)("div",{children:Object(o.jsx)("iframe",{title:"GoogleDocsResume",src:"https://docs.google.com/document/d/e/2PACX-1vROZATH6LmiBw0HomEu0qR0nqKl4lQTHmG4O06tLutBT6qljqId4SamDUDUYXkzVg/pub?embedded=true",style:{width:"95%",height:"80vh",margin:"0 0 0 20px"}})})}}}]);
+//# sourceMappingURL=7.33f5e793.chunk.js.map
