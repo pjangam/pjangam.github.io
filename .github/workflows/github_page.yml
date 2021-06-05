@@ -17,18 +17,13 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        test_number:
-          - 1
-          - 2
 
     steps:
       - uses: actions/checkout@v2
         with:
           ref: "react"
 
-      - name: Run Coverage ${{ matrix.test_number }}
+      - name: Run Coverage
         run: |
           make build cover
       - name: Generate Production build
@@ -38,7 +33,7 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.github_token }}
-          flag-name: run-${{ matrix.test_number }}
+          flag-name: run
           parallel: true
       - name: Publish to GitHub Pages
         # You may pin to the exact commit or the version.
