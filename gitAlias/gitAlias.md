@@ -15,4 +15,5 @@ alias stash="git stash save -u"
 alias sln="start *.sln"
 alias clean="git clean -df"
 alias rc="git rebase --continue"
+alias gitpatch="git diff --cached > mypatch.patch"
 ```
