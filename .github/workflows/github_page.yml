@@ -19,13 +19,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
       - name: Checkout
         uses: actions/checkout@v2
         with:
           ref: "react"
       - name: Run Coverage
         run: |
-          nvm install --lts
           make build cover
       - name: Publish Code Coverage
         uses: coverallsapp/github-action@master
