@@ -25,6 +25,7 @@ jobs:
           ref: "react"
       - name: Run Coverage
         run: |
+          nvm install --lts
           make build cover
       - name: Publish Code Coverage
         uses: coverallsapp/github-action@master
