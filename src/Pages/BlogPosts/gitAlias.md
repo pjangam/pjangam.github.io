@@ -15,4 +15,5 @@ alias stash="git stash save -u"
 alias sln="start *.sln"
 alias clean="git clean -df"
 alias rc="git rebase --continue"
+alias gtrack='git branch -u origin/$(git rev-parse --abbrev-ref HEAD)'
 ```
