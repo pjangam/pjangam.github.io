@@ -2,7 +2,6 @@
 
 ```
 alias gs="git status"
-alias gph="git push origin HEAD"
 alias gpl="git pull"
 alias gf="git fetch --all"
 alias gc="git add . && git commit"
@@ -16,4 +15,6 @@ alias sln="start *.sln"
 alias clean="git clean -df"
 alias rc="git rebase --continue"
 alias gtrack='git branch -u origin/$(git rev-parse --abbrev-ref HEAD)'
+alias upstream="git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD) $(git rev-parse --abbrev-ref HEAD)"
+alias gph="git push origin HEAD && upstream"
 ```
